@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheatSheet Hub | إنشاء حساب</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">CheatSheet Hub</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="cheatsheets.html">الاختصارات</a>
+                <a href="detail.html">تفاصيل</a>
+                <a href="contact.html">تواصل</a>
+                <a href="about.html">من نحن</a>
+                <a href="login.html" class="login-btn">تسجيل الدخول</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <div class="signup-header">
+                <h2>🚀 إنشاء حساب جديد</h2>
+                <p class="sub">انضم إلى مجتمع CheatSheet Hub وابدأ رحلتك البرمجية</p>
+            </div>
+
+            <form id="signupForm" class="signup-form">
+                <!-- الاسم الكامل -->
+                <div class="form-group">
+                    <label for="fullName">👤 الاسم الكامل</label>
+                    <input 
+                        type="text" 
+                        id="fullName" 
+                        placeholder="أدخل اسمك الكامل" 
+                        required 
+                        minlength="3"
+                        maxlength="50"
+                    />
+                    <div class="form-error" id="nameError"></div>
+                </div>
+
+                <!-- البريد الإلكتروني -->
+                <div class="form-group">
+                    <label for="signupEmail">📧 البريد الإلكتروني</label>
+                    <input 
+                        type="email" 
+                        id="signupEmail" 
+                        placeholder="example@mail.com" 
+                        required
+                    />
+                    <div class="form-error" id="emailError"></div>
+                </div>
+
+                <!-- رقم الجوال -->
+                <div class="form-group">
+                    <label for="signupPhone">📱 رقم الجوال</label>
+                    <input 
+                        type="tel" 
+                        id="signupPhone" 
+                        placeholder="05xxxxxxxx" 
+                        required
+                        pattern="[0-9]{10}"
+                    />
+                    <div class="form-error" id="phoneError"></div>
+                </div>
+
+                <!-- كلمة المرور -->
+                <div class="form-group">
+                    <label for="signupPassword">🔒 كلمة المرور</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="signupPassword" 
+                            placeholder="••••••••" 
+                            required
+                            minlength="6"
+                            maxlength="30"
+                        />
+                        <button type="button" class="toggle-password" onclick="togglePassword('signupPassword')">
+                            👁️
+                        </button>
+                    </div>
+                    <div class="password-strength" id="passwordStrength">
+                        <span class="strength-bar" id="strengthBar"></span>
+                        <span class="strength-text" id="strengthText">ضعف</span>
+                    </div>
+                    <ul class="password-requirements" id="passwordRequirements">
+                        <li id="reqLength">❌ 6 أحرف على الأقل</li>
+                        <li id="reqLower">❌ حرف صغير (a-z)</li>
+                        <li id="reqUpper">❌ حرف كبير (A-Z)</li>
+                        <li id="reqNumber">❌ رقم (0-9)</li>
+                    </ul>
+                    <div class="form-error" id="passwordError"></div>
+                </div>
+
+                <!-- تأكيد كلمة المرور -->
+                <div class="form-group">
+                    <label for="confirmPassword">✅ تأكيد كلمة المرور</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        placeholder="أعد كتابة كلمة المرور" 
+                        required
+                    />
+                    <div class="form-error" id="confirmError"></div>
+                </div>
+
+                <!-- الشروط والأحكام -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="termsCheckbox" required />
+                        <span>أوافق على <a href="#" onclick="showTerms()">الشروط والأحكام</a> وسياسة الخصوصية</span>
+                    </label>
+                    <div class="form-error" id="termsError"></div>
+                </div>
+
+                <!-- زر إنشاء الحساب -->
+                <button type="submit" class="btn-signup" id="signupBtn">
+                    إنشاء الحساب
+                </button>
+
+                <!-- رابط تسجيل الدخول -->
+                <p class="login-link">
+                    لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a>
+                </p>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CheatSheet Hub — بنك الاختصارات البرمجية</p>
+            <p class="footer-small">صنع بـ ❤️ للمطورين</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

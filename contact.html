@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheatSheet Hub | تواصل</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">CheatSheet Hub</span>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="cheatsheets.html">الاختصارات</a>
+                <a href="detail.html">تفاصيل</a>
+                <a href="contact.html" class="active">تواصل</a>
+                <a href="about.html">من نحن</a>
+                <a href="login.html" class="login-btn">تسجيل الدخول</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="section-title">📩 تواصل معنا</h2>
+            <form id="contactForm" class="contact-form">
+                <label for="contactName">الاسم الكامل</label>
+                <input type="text" id="contactName" placeholder="أدخل اسمك" required />
+
+                <label for="contactEmail">البريد الإلكتروني</label>
+                <input type="email" id="contactEmail" placeholder="example@mail.com" required />
+
+                <label for="contactPhone">رقم الجوال</label>
+                <input type="tel" id="contactPhone" placeholder="05xxxxxxxx" required />
+
+                <label for="contactMessage">الرسالة</label>
+                <textarea id="contactMessage" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+                <button type="submit" class="btn-submit">إرسال الرسالة</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 CheatSheet Hub — بنك الاختصارات البرمجية</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
